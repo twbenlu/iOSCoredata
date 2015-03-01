@@ -21,6 +21,10 @@
 		71891C2A18A38835005BBA33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71891C0C18A38835005BBA33 /* UIKit.framework */; };
 		71891C3218A38835005BBA33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71891C3018A38835005BBA33 /* InfoPlist.strings */; };
 		71891C3418A38835005BBA33 /* coredataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71891C3318A38835005BBA33 /* coredataTests.m */; };
+		71891C3F18A389E4005BBA33 /* country.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71891C3D18A389E4005BBA33 /* country.xcdatamodeld */; };
+		71891C4418A3B37E005BBA33 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71891C4318A3B37E005BBA33 /* CoreData.framework */; };
+		71891C4618A3B40A005BBA33 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 71891C4518A3B40A005BBA33 /* libsqlite3.dylib */; };
+		71891C4918A3B919005BBA33 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 71891C4818A3B919005BBA33 /* Country.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,11 @@
 		71891C2F18A38835005BBA33 /* coredataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "coredataTests-Info.plist"; sourceTree = "<group>"; };
 		71891C3118A38835005BBA33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71891C3318A38835005BBA33 /* coredataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coredataTests.m; sourceTree = "<group>"; };
+		71891C3E18A389E4005BBA33 /* country.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = country.xcdatamodel; sourceTree = "<group>"; };
+		71891C4318A3B37E005BBA33 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		71891C4518A3B40A005BBA33 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		71891C4718A3B919005BBA33 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		71891C4818A3B919005BBA33 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71891C4618A3B40A005BBA33 /* libsqlite3.dylib in Frameworks */,
+				71891C4418A3B37E005BBA33 /* CoreData.framework in Frameworks */,
 				71891C0B18A38835005BBA33 /* CoreGraphics.framework in Frameworks */,
 				71891C0D18A38835005BBA33 /* UIKit.framework in Frameworks */,
 				71891C0918A38835005BBA33 /* Foundation.framework in Frameworks */,
@@ -82,6 +93,10 @@
 		71891BFC18A38835005BBA33 = {
 			isa = PBXGroup;
 			children = (
+				71D9768918A687570029182E /* database */,
+				71891C4718A3B919005BBA33 /* Country.h */,
+				71891C4818A3B919005BBA33 /* Country.m */,
+				71891C3D18A389E4005BBA33 /* country.xcdatamodeld */,
 				71891C0E18A38835005BBA33 /* coredata */,
 				71891C2D18A38835005BBA33 /* coredataTests */,
 				71891C0718A38835005BBA33 /* Frameworks */,
@@ -101,6 +116,8 @@
 		71891C0718A38835005BBA33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71891C4518A3B40A005BBA33 /* libsqlite3.dylib */,
+				71891C4318A3B37E005BBA33 /* CoreData.framework */,
 				71891C0818A38835005BBA33 /* Foundation.framework */,
 				71891C0A18A38835005BBA33 /* CoreGraphics.framework */,
 				71891C0C18A38835005BBA33 /* UIKit.framework */,
@@ -150,6 +167,13 @@
 				71891C3018A38835005BBA33 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71D9768918A687570029182E /* database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71891C3F18A389E4005BBA33 /* country.xcdatamodeld in Sources */,
 				71891C1F18A38835005BBA33 /* ViewController.m in Sources */,
 				71891C1918A38835005BBA33 /* AppDelegate.m in Sources */,
 				71891C1518A38835005BBA33 /* main.m in Sources */,
+				71891C4918A3B919005BBA33 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,12 +402,15 @@
 		71891C3818A38835005BBA33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "coredata/coredata-Prefix.pch";
 				INFOPLIST_FILE = "coredata/coredata-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,12 +418,15 @@
 		71891C3918A38835005BBA33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "coredata/coredata-Prefix.pch";
 				INFOPLIST_FILE = "coredata/coredata-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +492,7 @@
 				71891C3918A38835005BBA33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71891C3A18A38835005BBA33 /* Build configuration list for PBXNativeTarget "coredataTests" */ = {
 			isa = XCConfigurationList;
@@ -468,8 +501,22 @@
 				71891C3C18A38835005BBA33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		71891C3D18A389E4005BBA33 /* country.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				71891C3E18A389E4005BBA33 /* country.xcdatamodel */,
+			);
+			currentVersion = 71891C3E18A389E4005BBA33 /* country.xcdatamodel */;
+			path = country.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 71891BFD18A38835005BBA33 /* Project object */;
 }

@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class AppDelegate;
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
+    AppDelegate* appDelegate;
+    NSArray *data;
+}
+
+@property (weak, nonatomic) IBOutlet UITextField *mylabel1;
+@property (weak, nonatomic) IBOutlet UITextField *mylabel2;
+@property (weak, nonatomic) IBOutlet UITableView *mytable;
+
+- (IBAction)mybtn:(id)sender;
+
+- (IBAction)get_btn:(id)sender;
 
 @end
